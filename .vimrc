@@ -14,6 +14,8 @@ set wildmode=list:full
 set backspace=eol,indent
 nnoremap j gj
 nnoremap k gk
+nnoremap ; :
+nnoremap <Space>v :vs<CR>:<C-u>VimShell<CR>
 
 " Indent
 set smartindent
@@ -49,7 +51,7 @@ autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 " Settings for Alduin(Colorscheme)
 let g:alduin_Shout_Become_Ethereal = 1
 colorscheme alduin
-
+"
 " dein
 if &compatible
   set nocompatible
@@ -61,3 +63,7 @@ call dein#add('Shougo/vimproc.vim',{'build':'make'})
 call dein#add('Shougo/vimshell.vim')
 " dein remove plugin
 "call map(dein#check_clean(),"delete(v:val,'rf')")
+
+" If you use dein.vim, syntax will be off.
+" To enble syntax on, you need this setting.
+syntax on
